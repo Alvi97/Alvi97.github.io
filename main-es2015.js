@@ -164,6 +164,7 @@ class AppComponent {
                 console.log(test[Object.keys(test)[test[(Object.keys(test).length) - 1]]]);
                 this.totalCasesByCountry = test[Object.keys(test)[(Object.keys(test).length) - 1]].total_cases;
                 this.totalDeathsByCountry = test[Object.keys(test)[(Object.keys(test).length) - 1]].total_deaths;
+                this.totalRecoveredByCountry = test[Object.keys(test)[(Object.keys(test).length) - 1]].total_recovered;
                 test[Object.keys(test)[(Object.keys(test).length) - 1]].total_recovered;
                 this.totalCasesCountryName = test[Object.keys(test)[(Object.keys(test).length) - 1]].country_name;
             });

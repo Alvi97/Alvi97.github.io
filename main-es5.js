@@ -273,6 +273,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               console.log(test[Object.keys(test)[test[Object.keys(test).length - 1]]]);
               _this2.totalCasesByCountry = test[Object.keys(test)[Object.keys(test).length - 1]].total_cases;
               _this2.totalDeathsByCountry = test[Object.keys(test)[Object.keys(test).length - 1]].total_deaths;
+              _this2.totalRecoveredByCountry = test[Object.keys(test)[Object.keys(test).length - 1]].total_recovered;
               test[Object.keys(test)[Object.keys(test).length - 1]].total_recovered;
               _this2.totalCasesCountryName = test[Object.keys(test)[Object.keys(test).length - 1]].country_name;
             });
