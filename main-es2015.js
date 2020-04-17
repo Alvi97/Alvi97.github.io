@@ -95,24 +95,16 @@ class AppComponent {
     }
     ngOnInit() {
         this.caller.Countries().subscribe(data => {
-            console.log(data, "countries");
             this.takenAt = data.statistic_taken_at;
             this.countries = data.affected_countries;
-            console.log(this.countries);
         });
         this.caller.TotalCases().subscribe(data => {
-            console.log(data, "totalcases");
             this.totalCases = data.total_cases;
             this.totalDeaths = data.total_deaths;
             this.totalRecovered = data.total_recovered;
-            console.log(this.countries);
         });
     }
     ngAfterViewInit() {
-        this.caller.MaskUsageInstructions().subscribe(data => {
-            console.log(data, "maskInstructions");
-            console.log("bbbbbbbb");
-        });
         _amcharts_amcharts4_core__WEBPACK_IMPORTED_MODULE_2__["useTheme"](_amcharts_amcharts4_themes_animated__WEBPACK_IMPORTED_MODULE_5__["default"]);
         // Themes end
         /* Create map instance */
@@ -136,7 +128,6 @@ class AppComponent {
         let lastSelected;
         polygonTemplate.events.on("hit", ev => {
             let countryname;
-            console.log(ev.target.dataItem.dataContext.name, "abbbbbaaaa");
             this.test = ev.target.dataItem.dataContext.name;
             if (this.test == "United Kingdom") {
                 countryname = "UK";
@@ -146,7 +137,6 @@ class AppComponent {
             }
             else
                 countryname = this.test;
-            console.log(countryname);
             const url = "https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_particular_country.php?country=" +
                 countryname;
             const httpOptions = {
@@ -156,12 +146,8 @@ class AppComponent {
                 })
             };
             this.http.get(url, httpOptions).subscribe(data => {
-                console.log(data);
                 let test = [];
                 test = data[Object.keys(data)[1]];
-                console.log(test, "tesstasatastastat");
-                console.log((Object.keys(test).length) - 1);
-                console.log(test[Object.keys(test)[test[(Object.keys(test).length) - 1]]]);
                 this.totalCasesByCountry = test[Object.keys(test)[(Object.keys(test).length) - 1]].total_cases;
                 this.totalDeathsByCountry = test[Object.keys(test)[(Object.keys(test).length) - 1]].total_deaths;
                 this.totalRecoveredByCountry = test[Object.keys(test)[(Object.keys(test).length) - 1]].total_recovered;

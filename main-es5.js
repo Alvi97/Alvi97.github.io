@@ -192,28 +192,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var _this = this;
 
           this.caller.Countries().subscribe(function (data) {
-            console.log(data, "countries");
             _this.takenAt = data.statistic_taken_at;
             _this.countries = data.affected_countries;
-            console.log(_this.countries);
           });
           this.caller.TotalCases().subscribe(function (data) {
-            console.log(data, "totalcases");
             _this.totalCases = data.total_cases;
             _this.totalDeaths = data.total_deaths;
             _this.totalRecovered = data.total_recovered;
-            console.log(_this.countries);
           });
         }
       }, {
         key: "ngAfterViewInit",
         value: function ngAfterViewInit() {
           var _this2 = this;
-
-          this.caller.MaskUsageInstructions().subscribe(function (data) {
-            console.log(data, "maskInstructions");
-            console.log("bbbbbbbb");
-          });
 
           _amcharts_amcharts4_core__WEBPACK_IMPORTED_MODULE_2__["useTheme"](_amcharts_amcharts4_themes_animated__WEBPACK_IMPORTED_MODULE_5__["default"]); // Themes end
 
@@ -246,7 +237,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var lastSelected;
           polygonTemplate.events.on("hit", function (ev) {
             var countryname;
-            console.log(ev.target.dataItem.dataContext.name, "abbbbbaaaa");
             _this2.test = ev.target.dataItem.dataContext.name;
 
             if (_this2.test == "United Kingdom") {
@@ -255,7 +245,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               countryname = "USA";
             } else countryname = _this2.test;
 
-            console.log(countryname);
             var url = "https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_particular_country.php?country=" + countryname;
             var httpOptions = {
               headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
@@ -265,12 +254,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             };
 
             _this2.http.get(url, httpOptions).subscribe(function (data) {
-              console.log(data);
               var test = [];
               test = data[Object.keys(data)[1]];
-              console.log(test, "tesstasatastastat");
-              console.log(Object.keys(test).length - 1);
-              console.log(test[Object.keys(test)[test[Object.keys(test).length - 1]]]);
               _this2.totalCasesByCountry = test[Object.keys(test)[Object.keys(test).length - 1]].total_cases;
               _this2.totalDeathsByCountry = test[Object.keys(test)[Object.keys(test).length - 1]].total_deaths;
               _this2.totalRecoveredByCountry = test[Object.keys(test)[Object.keys(test).length - 1]].total_recovered;
