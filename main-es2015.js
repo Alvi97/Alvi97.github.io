@@ -494,7 +494,7 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["platformBrowser"]().boot
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Alvi\Desktop\map\coronavirus.github.io\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Alvi\Desktop\map\coronavirus-map\src\main.ts */"./src/main.ts");
 
 
 /***/ })

@@ -376,8 +376,8 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Alvi\Desktop\map\coronavirus.github.io\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-module.exports = __webpack_require__(/*! C:\Users\Alvi\Desktop\map\coronavirus.github.io\src\styles.css */"./src/styles.css");
+__webpack_require__(/*! C:\Users\Alvi\Desktop\map\coronavirus-map\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+module.exports = __webpack_require__(/*! C:\Users\Alvi\Desktop\map\coronavirus-map\src\styles.css */"./src/styles.css");
 
 
 /***/ })

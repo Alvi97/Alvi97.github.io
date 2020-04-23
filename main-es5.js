@@ -884,7 +884,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! C:\Users\Alvi\Desktop\map\coronavirus.github.io\src\main.ts */
+    /*! C:\Users\Alvi\Desktop\map\coronavirus-map\src\main.ts */
     "./src/main.ts");
     /***/
   }
